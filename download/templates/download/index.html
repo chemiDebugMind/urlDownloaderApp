@@ -3,16 +3,19 @@
 <head>
   <title>{% block title %}{% endblock %}</title>
   {% load bootstrap5 %}
+    {% load static %}
 
   {% bootstrap_css %}
   {% bootstrap_javascript %}
+<script src="{% static 'download/download.js' %}"></script>
+
 </head>
 <body>
 
 <div class="container">
   <ul class="nav bg-info">
     <li class="nav-item">
-      <a class="nav-link link-light" href="{% url 'download:downloader' %}">Downloader App</a>
+      <a class="nav-link link-light" href="{% url 'download:index' %}">Downloader App</a>
     </li>
   </ul>
 
